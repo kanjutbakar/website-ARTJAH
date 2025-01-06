@@ -1,0 +1,175 @@
+/* Reset margin, padding, and box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  /* Body styling */
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url("9.jpg")
+      no-repeat;
+    background-size: cover;
+    background-position: center;
+    flex-direction: column;
+    color: #ffffff;
+  }
+  
+  /* Wrapper styling with shadow */
+  .wrapper {
+    width: 420px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+    padding: 30px 40px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Default shadow */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth animation */
+  }
+  
+  /* Shadow grows on hover */
+  .wrapper:hover {
+    box-shadow: 0 10px 30px rgba(255, 130, 14, 0.596); /* Larger shadow on hover */
+    transform: translateY(-5px); /* Slightly lifts the box */
+  }
+  
+  /* Shadow shrinks on click */
+  .wrapper:active {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Smaller shadow on click */
+    transform: translateY(2px); /* Slightly presses down the box */
+  }
+  
+  /* Input box styling */
+  .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+  }
+  
+  .input-box input {
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #000000;
+    padding: 20px 45px 20px 20px;
+  }
+  
+  .input-box input::placeholder {
+    color: #000000;
+  }
+  
+  .input-box i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #000000;
+  }
+  
+  /* Remember and forgot password section */
+  .remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -15px 0 15px;
+    color: #ffffff;
+  }
+  
+  .remember-forgot label input {
+    accent-color: #ffffff;
+    margin-right: 3px;
+  }
+  
+  .remember-forgot a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  .remember-forgot a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Button styling with shadow animation */
+  .btn {
+    width: 100%;
+    height: 45px;
+    background: #ffffff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    box-shadow: 0 5px 15px rgba(37, 17, 59, 0.637); /* Default shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition for smooth animation */
+  }
+  
+  /* Shadow grows when hovering */
+  .btn:hover {
+    box-shadow: 0 10px 25px rgb(204, 117, 18); /* Shadow becomes larger */
+    transform: translateY(-3px); /* Button moves slightly up */
+  }
+  
+  /* Button hover and click animation */
+  .btn {
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .btn:active {
+    transform: scale(0.95); /* Tombol sedikit mengecil saat ditekan */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Bayangan lebih kecil */
+  }
+  
+  /* Info Section styling */
+  .info-section {
+    width: 420px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+    padding: 20px 30px;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 20px;
+  }
+  
+  .info-section h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #ffffff;
+  }
+  
+  .info-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  /* Contact items */
+  .contact-item {
+    text-align: center;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .contact-item i {
+    font-size: 20px;
+  }
+  
+  
+  

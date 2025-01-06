@@ -1,0 +1,890 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+:root {
+  --bg-color: #1f242d;
+  --second-bg-color: #323946;
+  --text-color: #fff;
+  --main-color: #0ef;
+}
+*::selection {
+  background: var(--main-color);
+  color: var(--bg-color);
+}
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+.sectio{
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.header.sticky{
+    border-bottom: .1rem solid rgba(0,0,0,.2);
+}
+
+.logo{
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 600;
+    cursor: default;
+}
+
+
+.text {
+    color: var(--main-color); /* Warna teks animasi */
+    font-weight: bold;
+}
+
+.navbar a {
+    font-size: 1.7rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a:active{
+    color: var(--main-color);
+}
+
+#menu-icon{
+    font-size: 3.6rem;
+    color: var(--text-color);
+    display: none;
+}
+
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg-color);
+}
+
+.home-img img{
+    width: 35vw;
+}
+
+.home-img img{
+    width: 35vw;
+    animation: floatImage 4s ease-in-out infinite;
+}
+
+@keyframes floatImage{
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-2.4rem);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.home-contect h3{
+    font-size: 3.2rem;
+    font-weight: 700;;
+}
+
+.home-contect h3:nth-of-type(2){
+    margin-bottom: 2rem;
+}
+
+span{
+    color: var(--main-color);
+}
+
+.home-contect h1{
+    font-size: 5.6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.social-media p{
+    font-size: 1.1rem;
+}
+
+.social-media a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--main-color);
+    margin: 3rem 1.5rem 3rem 0;
+    transition: .5s ease;
+}
+
+.social-media a:hover{
+    background: var(--main-color);
+    color: var(--second-bg-color);
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--main-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    font-size: 1.6rem;
+    color: var(--second-bg-color);
+    left: 1rem;
+    font-weight: 600;
+    transition: .5 ease;
+
+}
+
+.btn:hover{box-shadow: none;}
+
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background: var(--second-bg-color);
+}
+
+.about-img img{
+    width: 35vw;
+}
+
+.heading {
+    text-align:  center;
+    font-size: 4.5rem;
+
+}
+
+.about-contect h2{
+    text-align: left;
+    line-height: 1.2;
+}
+
+.about-contect h3{
+    font-size: 2.6rem;
+}
+
+.about-contect p{
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+}
+
+.portfolio {
+    background: var(--bg-color);
+}
+
+.portfolio  h2{
+    margin-bottom: 4rem;
+}
+
+.portfolio-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.portfolio-container .portfolio-box{
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--bg-color);
+    overflow: hidden;
+    display: flex;
+}
+
+.portfolio-box img{
+    width: 100%;
+    transition: .5s ease;
+}
+
+.portfolio-box:hover img{
+    transition: scale(1.1);
+}
+
+
+.portfolio-box .portfolio-layer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,.1),var(--main-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+    transform: translateY(100%);
+    transition: .5s ease;
+}
+
+.portfolio-box:hover .portfolio-layer{
+   transform: translateY(0);
+;
+}
+
+.portfolio-layer h4{
+    font-size: 4rem;
+}
+
+.portfolio-layer p{
+    font-size: 1.6rem;
+    margin: .3rem 0 1rem;
+}
+
+.portfolio-layer a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background: var(--text-color);
+    border-radius: 50%;
+}
+
+.portfolio-layer a i{
+    font-size: 2rem;
+    color: var(--second-bg-color)
+}
+
+.Gallery{
+    background: var(--second-bg-color);
+    font-family: Poppins;
+    font-size: 12px;
+}
+
+
+.Gallery  h2{
+    margin-bottom: 7rem;
+}
+/* carousel */
+.carousel{
+    height: 100vh;
+    margin-top: -50px;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+}
+.carousel .list .item{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0 0 0 0;
+}
+.carousel .list .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.carousel .list .item .content{
+    position: absolute;
+    top: 20%;
+    width: 1140px;
+    max-width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-right: 30%;
+    box-sizing: border-box;
+    color: #fff;
+    text-shadow: 0 5px 10px #0004;
+}
+.carousel .list .item .author{
+    font-weight: bold;
+    letter-spacing: 10px;
+}
+.carousel .list .item .title,
+.carousel .list .item .topic{
+    font-size: 5em;
+    font-weight: bold;
+    line-height: 1.3em;
+}
+.carousel .list .item .topic{
+    color: rgba(139, 47, 132, 0.904);
+}
+.carousel .list .item .buttons{
+    display: grid;
+    grid-template-columns: repeat(2, 130px);
+    grid-template-rows: 40px;
+    gap: 5px;
+    margin-top: 20px;
+}
+.carousel .list .item .buttons button{
+    border: none;
+    background-color: #eee;
+    letter-spacing: 3px;
+    font-family: Poppins;
+    font-weight: 500;
+}
+.carousel .list .item .buttons button:nth-child(2){
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #eee;
+}
+/* thumbail */
+.thumbnail{
+    position: absolute;
+    bottom: 10px;
+    left: 40%;
+    width: max-content;
+    transform: translateX(10%);
+    z-index: 99;
+    display: flex;
+    gap: 20px;
+}
+.thumbnail .item{
+    width: 150px;
+    height: 220px;
+    flex-shrink: 0;
+    position: relative;
+}
+.thumbnail .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.thumbnail .item .content{
+    color: #fff;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+}
+.thumbnail .item .content .title{
+    font-weight: 500;
+}
+.thumbnail .item .content .description{
+    font-weight: 300;
+}
+/* arrows */
+.arrows{
+    position: absolute;
+    top: 80%;
+    right: 60%;
+    transform: translateX(10%);
+    z-index: 99;
+    width: 300px;
+    max-width: 30%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.arrows button{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #eee4;
+    border: none;
+    color: #fff;
+    font-family: monospace;
+    font-weight: bold;
+    transition: .5s;
+}
+.arrows button:hover{   
+    background-color: #fff;
+    color: #000;
+}
+
+/* animation */
+.carousel .list .item:nth-child(1){
+    z-index: 1;
+}
+
+/* animation text in first item */
+
+.carousel .list .item:nth-child(1) .content .author,
+.carousel .list .item:nth-child(1) .content .title,
+.carousel .list .item:nth-child(1) .content .topic,
+.carousel .list .item:nth-child(1) .content .des,
+.carousel .list .item:nth-child(1) .content .buttons
+{
+    transform: translateY(50px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent .5s 1s linear 1 forwards;
+}
+@keyframes showContent{
+    to{
+        transform: translateY(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+.carousel .list .item:nth-child(1) .content .title{
+    animation-delay: 1.2s!important;
+}
+.carousel .list .item:nth-child(1) .content .topic{
+    animation-delay: 1.4s!important;
+}
+.carousel .list .item:nth-child(1) .content .des{
+    animation-delay: 1.6s!important;
+}
+.carousel .list .item:nth-child(1) .content .buttons{
+    animation-delay: 1.8s!important;
+}
+/* create animation when next click */
+.carousel.next .list .item:nth-child(1) img{
+    width: 150px;
+    height: 220px;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    border-radius: 30px;
+    animation: showImage .5s linear 1 forwards;
+}
+@keyframes showImage{
+    to{
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+}
+
+.carousel.next .thumbnail .item:nth-last-child(1){
+    overflow: hidden;
+    animation: showThumbnail .5s linear 1 forwards;
+}
+.carousel.prev .list .item img{
+    z-index: 100;
+}
+@keyframes showThumbnail{
+    from{
+        width: 0;
+        opacity: 0;
+    }
+}
+.carousel.next .thumbnail{
+    animation: effectNext .5s linear 1 forwards;
+}
+
+@keyframes effectNext{
+    from{
+        transform: translateX(150px);
+    }
+}
+
+
+
+
+/* prev click */
+
+.carousel.prev .list .item:nth-child(2){
+    z-index: 2;
+}
+
+.carousel.prev .list .item:nth-child(2) img{
+    animation: outFrame 0.5s linear 1 forwards;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+@keyframes outFrame{
+    to{
+        width: 150px;
+        height: 220px;
+        bottom: 50px;
+        left: 50%;
+        border-radius: 20px;
+    }
+}
+
+.carousel.prev .thumbnail .item:nth-child(1){
+    overflow: hidden;
+    opacity: 0;
+    animation: showThumbnail .5s linear 1 forwards;
+}
+.carousel.next .arrows button,
+.carousel.prev .arrows button{
+    pointer-events: none;
+}
+.carousel.prev .list .item:nth-child(2) .content .author,
+.carousel.prev .list .item:nth-child(2) .content .title,
+.carousel.prev .list .item:nth-child(2) .content .topic,
+.carousel.prev .list .item:nth-child(2) .content .des,
+.carousel.prev .list .item:nth-child(2) .content .buttons
+{
+    animation: contentOut 1.5s linear 1 forwards!important;
+}
+
+@keyframes contentOut{
+    to{
+        transform: translateY(-150px);
+        filter: blur(20px);
+        opacity: 0;
+    }
+}
+@media screen and (max-width: 678px) {
+    .carousel .list .item .content{
+        padding-right: 0;
+    }
+    .carousel .list .item .content .title{
+        font-size: 30px;
+    }
+}
+
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: var(--second-bg-color);
+}
+
+.footer-text p {
+    font-size: 1.6rem;
+}
+
+.footer-iconTop a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background: var(--main-color);
+    border-radius: .8rem;
+    transition: .5s ease;
+}
+
+.footer-iconTop a:hover {
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.footer-iconTop a i{
+    font-size: 2.4rem;
+    color: var(--second-bg-color);
+}
+
+/* General Styling */
+.contact {
+    display: flex;
+    justify-content: space-between; /* Untuk memisahkan kiri dan kanan */
+    align-items: flex-start;
+    padding: 20px;
+    background-color: var(--bg-color);
+    color: #f9f9f9;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Contact Icon Section */
+.contact-icon {
+    width: 45%; /* Ambil 45% lebar layar untuk bagian kiri */
+    padding: 20px;
+    background-color: var(--bg-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.contact-icon h3{
+    color: #ececec;
+}
+
+/* Container Styling for Icons */
+.contact-icon .container {
+    display: flex;
+    flex-wrap: wrap; /* Membuat ikon terbungkus jika terlalu panjang */
+    gap: 20px;
+}
+
+.small-rectangle {
+    width: 170px; /* Lebar kotak */
+    height: 60px; /* Tinggi kotak */
+    background-color: var(--bg-color); /* Warna latar belakang */
+    display: flex; /* Mengatur konten di tengah */
+    grid-template-columns: repeat(3, 1fr); /* Membagi menjadi 3 kolom */
+    justify-content: center; /* Horizontal center */
+    align-items: center; /* Vertical center */
+    border-radius: px; /* Sudut kotak melengkung */
+    position: relative; /* Untuk elemen overlay */
+    border: 2px solid var(--main-color); /* Garis tepi dengan warna biru */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s; /* Animasi */
+}
+
+.small-rectangle:hover {
+    transform: scale(1.1); /* Membesar saat hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Bayangan lebih besar saat hover */
+    border-color: var(--main-color); /* Ubah warna garis tepi saat hover */
+}
+
+.small-rectangle .content a i {
+    font-size: 6rem; /* Ukuran ikon */
+    color: var(--text-color); /* Warna ikon */
+    transition: color 0.3s; /* Animasi perubahan warna */
+    position: absolute; /* Posisi absolut */
+    left: 10px; /* Jarak dari sisi kiri layar */
+    top: 50%; /* Tempatkan di tengah secara vertikal */
+    transform: translateY(-50%); /* Pastikan elemen tetap terpusat secara vertikal */
+}
+
+
+.small-rectangle:hover .content a i {
+    color: var(--text-color); /* Warna ikon saat hover */
+}
+
+/* Overlay Text */
+.small-rectangle .text-overlay {
+    position: absolute; /* Posisi overlay relatif ke kotak */
+    bottom: 10px; /* Jarak dari bawah */
+    right: 10px;
+    left: 60px;
+    font-size: 1.8rem; /* Ukuran font overlay */
+    color: #ffffff; /* Warna teks */
+    text-align: center; /* Pusatkan teks */
+    font-weight: 600; /* Tebal teks */
+    padding: 5px; /* Jarak dalam */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+}
+
+
+/* Contact List */
+.contact-list {
+    margin-top: 20px;
+}
+
+.contact-list h5 {
+    font-size: 1.5rem;
+    color: #f9f9f9;
+    margin-bottom: 10px;
+}
+
+.contact-list li {
+    list-style: none;
+    margin: 10px 0;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    color: #f9f9f9;
+}
+
+.contact-list li i {
+    font-size: 1.2rem;
+    margin-right: 10px;
+    color: var(--main-color);
+}
+
+/* Contact Form Section */
+.contact-form {
+    width: 45%; /* Ambil 45% lebar layar untuk bagian kanan */
+    padding: 20px;
+    background-color: var(--bg-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.contact-form h5 {
+    font-size: 1.5rem;
+    color: #f9f9f9;
+    margin-bottom: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--second-bg-color);
+    border-radius: 7px;
+    font-size: 1rem;
+    background-color: var(--second-bg-color);
+}
+
+.contact-form input.send {
+    background-color: var(--main-color);
+    color: var(--second-bg-color);
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, box-shadow 0.3s; /* Tambahkan transisi untuk box-shadow */
+    border: none; /* Opsional: Hilangkan border jika ada */
+    padding: 10px 20px; /* Opsional: Sesuaikan ukuran tombol */
+    border-radius: 5px; /* Opsional: Berikan sudut melengkung */
+}
+
+.contact-form input.send:hover {
+    box-shadow: 0 0 10px 5px rgba(68, 187, 241, 0.6); /* Efek cahaya biru */
+}
+
+
+/* Responsiveness for Smaller Screens */
+@media screen and (max-width: 768px) {
+    .contact {
+        flex-direction: column; /* Susun secara vertikal */
+        align-items: center;
+    }
+
+    .contact-icon, .contact-form {
+        width: 100%; /* Ambil 100% lebar layar */
+        margin-bottom: 20px;
+    }
+}
+
+
+
+
+
+
+
+/*BREAKPOINTS*/
+@media (max-width: 1200px){
+    html{
+        font-size: 55%;
+    }
+}
+
+
+@media (max-width: 991px){
+   .header{
+    padding: 2rem 3%;
+   }
+
+   .section {
+    padding: 10rem 3% 2rem;
+   }
+
+   .portfolio{
+    padding-bottom: 7rem;
+   }
+
+   .contact{
+    min-height: auto;
+   }
+
+   .footer{
+    padding: 2rem 3%;
+   }
+}
+
+@media (max-width: 768px){
+    #menu-icon{
+        display: block;
+    }
+    .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: var(--bg-color);
+        border-top: .1rem solid rgba(0,0,0,.2);
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
+        display: none;
+    }
+
+    .navbar.active{
+        display: block;
+    }
+    .navbar a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    .home{
+        flex-direction: column;
+    }
+
+    .home-contect h3 {
+        font-size: 2.6rem;
+    }
+
+    .home-contect h1 {
+        font-size: 5rem;
+    }
+
+    .home-img img {
+        width: 70vw;
+        margin-top: 4rem;
+    }
+
+    .about{
+        flex-direction: column-reverse;
+    }
+
+    .about-img{
+        width: 70vw;
+        margin-top: 4rem;
+    }
+
+    .portfolio h2{
+        margin-bottom: 3rem;
+    }
+
+    .portfolio-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    
+}
+
+@media (max-width: 617px){
+    .portfolio-container{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 450px){
+    html {
+        font-size: 50%;
+    }
+
+    .contact form .input-box input {
+        width: 100%;
+    }
+}
+
+@media (max-width: 365px){
+    .home-img img{
+        width: 90vw;
+    }
+
+    .about-img img{
+        width: 90vw;
+    }
+
+    .footer{
+        flex-direction: column-reverse;
+    }
+
+    .footer p {
+        text-align: center;
+        margin-top: 2rem;
+    }
+}
+
+
+
